@@ -12,20 +12,20 @@
 <body>
     <form class="create-user-form" style="display: flex; flex-direction:column">
         <div class="form-row">
-            <label for="name">Name</label>
-            <input type="text" id="name">
+            <label for="name" >Name</label>
+            <input type="text" id="name" data-testid="name-input">
         </div>
         <div class="form-row">
             <label for="email">email</label>
-            <input type="email" id="email">
+            <input type="email" id="email" data-testid="email-input">
         </div>
         <div class="form-row">
             <label for="password">password</label>
-            <input type="password" id="password">
+            <input type="password" id="password" data-testid="password-input">
 
         </div class="form-row">
         <div class="form-row">
-            <button type="submit" style="cursor: pointer;" class="submit-crear-usuario"> Crear usuario </button>
+            <button type="submit" style="cursor: pointer;" class="submit-crear-usuario" data-testid="submit-button"> Crear usuario </button>
         </div </form>
 
         <h2>Users List</h2>

@@ -20,8 +20,8 @@ export const createUser = async (event) => {
 
     // Get the list of users again and update the view
     document.querySelector(".create-user-form").reset();
-
     mapUsersInList();
+
   } catch (error) {
     console.log("There was an error creating a new user: ", error);
     throw new Error(error);
@@ -40,6 +40,7 @@ export const deleteUser = async (event) => {
     // Delete a user
     await userApi.deleteUser(id);
 
+    //update the view
     mapUsersInList();
   } catch (error) {
     console.log("There was an error deleting the user: ", error);
@@ -63,6 +64,7 @@ export const mapUsersInList = () => {
 
       // add event listener to the delete button
       const deleteButtons = document.querySelectorAll(".delete-user");
+     
       deleteButtons.forEach((button) => {
         button.addEventListener("click", deleteUser);
       });
